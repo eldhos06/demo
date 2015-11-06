@@ -1,5 +1,13 @@
 <items   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:noNamespaceSchemaLocation="items.xsd">
+   
+   <relations>
+    <relation code="StadiumMatchRelation" localized="false" generate="true" autocreate="true">
+       <sourceElement type="Stadium" qualifier="stadium" cardinality="one" />
+       <targetElement type="Match" qualifier="matches" cardinality="many"/>
+    </relation>
+</relations> 
+   
     
     <itemtypes>
         <itemtype code="Stadium" generate="true" autocreate="true">
