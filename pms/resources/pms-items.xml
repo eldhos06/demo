@@ -32,7 +32,7 @@
                     <persistence type="property"/>
                     <modifiers optional="false" unique="true"/>
                 </attribute>
-                <attribute qualifier="name" type="java.lang.Integer">
+                <attribute qualifier="name" type="java.lang.String">
                     <description>State</description>
                     <persistence type="property" />
                 </attribute>
@@ -46,7 +46,7 @@
                     <persistence type="property"/>
                     <modifiers optional="false" unique="true"/>
                 </attribute>
-                <attribute qualifier="name" type="java.lang.Integer">
+                <attribute qualifier="name" type="java.lang.String">
                     <description>ProjectName</description>
                     <persistence type="property" />
                 </attribute>
@@ -86,7 +86,7 @@
                     <persistence type="property"/>
                     <modifiers optional="false" unique="true"/>
                 </attribute>
-                <attribute qualifier="description" type="java.lang.Integer">
+                <attribute qualifier="description" type="java.lang.String">
                     <description>TaskDescription</description>
                     <persistence type="property" />
                 </attribute>
