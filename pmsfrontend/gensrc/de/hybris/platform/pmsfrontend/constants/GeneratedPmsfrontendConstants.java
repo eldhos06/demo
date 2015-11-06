@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 6 Nov, 2015 1:47:34 PM                      ---
+ * --- Generated at 6 Nov, 2015 1:35:32 PM                      ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -15,30 +15,18 @@
  * license agreement you entered into with hybris.
  *  
  */
-package de.hybris.platform.pms.constants;
+package de.hybris.platform.pmsfrontend.constants;
 
 /**
  * @deprecated use constants in Model classes instead
  */
 @Deprecated
 @SuppressWarnings({"unused","cast","PMD"})
-public class GeneratedPmsConstants
+public class GeneratedPmsfrontendConstants
 {
-	public static final String EXTENSIONNAME = "pms";
-	public static class TC
-	{
-		public static final String EMPLOYEEMASTER = "Employeemaster".intern();
-		public static final String PROJECT = "Project".intern();
-		public static final String STADIUM = "Stadium".intern();
-		public static final String STATE = "State".intern();
-		public static final String TASKMASTER = "TaskMaster".intern();
-	}
-	public static class Attributes
-	{
-		// no constants defined.
-	}
+	public static final String EXTENSIONNAME = "pmsfrontend";
 	
-	protected GeneratedPmsConstants()
+	protected GeneratedPmsfrontendConstants()
 	{
 		// private constructor
 	}

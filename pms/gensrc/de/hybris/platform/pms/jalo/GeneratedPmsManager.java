@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 6 Nov, 2015 1:04:30 PM                      ---
+ * --- Generated at 6 Nov, 2015 1:47:34 PM                      ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -19,8 +19,18 @@ package de.hybris.platform.pms.jalo;
 
 import de.hybris.platform.jalo.Item;
 import de.hybris.platform.jalo.Item.AttributeMode;
+import de.hybris.platform.jalo.JaloBusinessException;
+import de.hybris.platform.jalo.JaloSystemException;
+import de.hybris.platform.jalo.SessionContext;
 import de.hybris.platform.jalo.extension.Extension;
+import de.hybris.platform.jalo.type.ComposedType;
+import de.hybris.platform.jalo.type.JaloGenericCreationException;
 import de.hybris.platform.pms.constants.PmsConstants;
+import de.hybris.platform.pms.jalo.Employeemaster;
+import de.hybris.platform.pms.jalo.Project;
+import de.hybris.platform.pms.jalo.Stadium;
+import de.hybris.platform.pms.jalo.State;
+import de.hybris.platform.pms.jalo.TaskMaster;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -46,6 +56,136 @@ public abstract class GeneratedPmsManager extends Extension
 			ret.putAll(attr);
 		}
 		return ret;
+	}
+	
+	public Employeemaster createEmployeemaster(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( PmsConstants.TC.EMPLOYEEMASTER );
+			return (Employeemaster)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating Employeemaster : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public Employeemaster createEmployeemaster(final Map attributeValues)
+	{
+		return createEmployeemaster( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public Project createProject(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( PmsConstants.TC.PROJECT );
+			return (Project)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating Project : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public Project createProject(final Map attributeValues)
+	{
+		return createProject( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public Stadium createStadium(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( PmsConstants.TC.STADIUM );
+			return (Stadium)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating Stadium : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public Stadium createStadium(final Map attributeValues)
+	{
+		return createStadium( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public State createState(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( PmsConstants.TC.STATE );
+			return (State)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating State : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public State createState(final Map attributeValues)
+	{
+		return createState( getSession().getSessionContext(), attributeValues );
+	}
+	
+	public TaskMaster createTaskMaster(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( PmsConstants.TC.TASKMASTER );
+			return (TaskMaster)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating TaskMaster : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public TaskMaster createTaskMaster(final Map attributeValues)
+	{
+		return createTaskMaster( getSession().getSessionContext(), attributeValues );
 	}
 	
 	@Override
