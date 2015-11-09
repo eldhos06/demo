@@ -6,6 +6,7 @@ package de.hybris.platform.pms.facade.impl;
 import de.hybris.platform.pms.data.AssignedTaskData;
 import de.hybris.platform.pms.data.ProjectData;
 import de.hybris.platform.pms.facade.AssignTaskfacade;
+import de.hybris.platform.pms.model.AssignedtaskModel;
 import de.hybris.platform.pms.model.ProjectModel;
 import de.hybris.platform.pms.model.TaskMasterModel;
 import de.hybris.platform.pms.service.AssignTaskService;
@@ -34,12 +35,22 @@ public class PmsAssignTaskfacade implements AssignTaskfacade
 		{
 			for (final TaskMasterModel taskMasterModel : TaskMasterModelresult)
 			{
+				final String TaskId = taskMasterModel.getPk().toString();
 				final AssignedTaskData data = new AssignedTaskData();
-				data.setTaskPK(taskMasterModel.getPk().toString());
+				data.setTaskPK(TaskId);
 				data.setName(taskMasterModel.getCode().toString());
-				data.setAssignedPK("0");
-				data.setAssignedTo("0");
-				data.setStatus("");
+				final List<AssignedtaskModel> relationModel = assignTaskService.GetAssignedDetails(TaskId);
+				if (!relationModel.isEmpty())
+				{
+					data.setAssignedPK(relationModel.get(0).getPk().toString());
+					data.setAssignedTo(relationModel.get(0).getEmployeemaster().getName());
+					data.setStatus(relationModel.get(0).getStatus().toString());
+					data.setDescription(relationModel.get(0).getTaskMaster().getDescription());
+				}
+				else
+				{
+					data.setAssignedPK("0");
+				}
 				dataCollloction.add(data);
 			}
 		}
@@ -60,4 +71,6 @@ public class PmsAssignTaskfacade implements AssignTaskfacade
 		return projectDatas;
 
 	}
+
+
 }

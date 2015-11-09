@@ -113,7 +113,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 		);
 	
 		createEnumerationType(
-			"Satus",
+			"Status",
 			null
 		);
 	
@@ -139,6 +139,8 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 				single_createattr_Assignedtask_employeemaster();
 			
 				single_createattr_Assignedtask_taskMaster();
+			
+				single_createattr_Assignedtask_status();
 			
 				single_createattr_State_code();
 			
@@ -266,6 +268,23 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 					"taskMaster",  
 					null,
 					"TaskMaster",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
+					null,
+					sqlColumnDefinitions
+				);
+			
+	}
+	
+	public void single_createattr_Assignedtask_status() throws JaloBusinessException
+	{
+		
+						Map sqlColumnDefinitions = null;
+					
+				createPropertyAttribute(
+					"Assignedtask", 
+					"status",  
+					null,
+					"Status",
 					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
 					null,
 					sqlColumnDefinitions
@@ -489,7 +508,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 	
 	
 		createEnumerationValues(
-			"Satus",
+			"Status",
 			false,
 			Arrays.asList( new String[] {
 			
@@ -552,6 +571,8 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			single_setAttributeProperties_Assignedtask_employeemaster();
 		
 			single_setAttributeProperties_Assignedtask_taskMaster();
+		
+			single_setAttributeProperties_Assignedtask_status();
 		
 				{
 				Map customPropsMap = new HashMap();
@@ -630,7 +651,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			single_setAttributeProperties_TaskMaster_project();
 		
 				setDefaultProperties(
-					"Satus",
+					"Status",
 					true,
 					true,
 					null
@@ -741,6 +762,28 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 								false, 
 								null,
 								null,
+								null,
+								true,
+								true,
+								null,
+								customPropsMap,
+								null
+							);
+						}
+					
+						public void single_setAttributeProperties_Assignedtask_status() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"Assignedtask", 
+								"status",
+								false, 
+								em().getEnumerationValue("Status","Pending"),
+								"em().getEnumerationValue(\"Status\",\"Pending\")",
 								null,
 								true,
 								true,

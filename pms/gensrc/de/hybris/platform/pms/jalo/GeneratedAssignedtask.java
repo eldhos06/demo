@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 9 Nov, 2015 3:12:14 PM                      ---
+ * --- Generated at 9 Nov, 2015 6:18:35 PM                      ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -20,6 +20,7 @@ package de.hybris.platform.pms.jalo;
 import de.hybris.platform.jalo.GenericItem;
 import de.hybris.platform.jalo.Item.AttributeMode;
 import de.hybris.platform.jalo.SessionContext;
+import de.hybris.platform.jalo.enumeration.EnumerationValue;
 import de.hybris.platform.pms.constants.PmsConstants;
 import de.hybris.platform.pms.jalo.Employeemaster;
 import de.hybris.platform.pms.jalo.TaskMaster;
@@ -39,6 +40,8 @@ public abstract class GeneratedAssignedtask extends GenericItem
 	public static final String EMPLOYEEMASTER = "employeemaster";
 	/** Qualifier of the <code>Assignedtask.taskMaster</code> attribute **/
 	public static final String TASKMASTER = "taskMaster";
+	/** Qualifier of the <code>Assignedtask.status</code> attribute **/
+	public static final String STATUS = "status";
 	protected static final Map<String, AttributeMode> DEFAULT_INITIAL_ATTRIBUTES;
 	static
 	{
@@ -46,6 +49,7 @@ public abstract class GeneratedAssignedtask extends GenericItem
 		tmp.put(CODE, AttributeMode.INITIAL);
 		tmp.put(EMPLOYEEMASTER, AttributeMode.INITIAL);
 		tmp.put(TASKMASTER, AttributeMode.INITIAL);
+		tmp.put(STATUS, AttributeMode.INITIAL);
 		DEFAULT_INITIAL_ATTRIBUTES = Collections.unmodifiableMap(tmp);
 	}
 	@Override
@@ -124,6 +128,42 @@ public abstract class GeneratedAssignedtask extends GenericItem
 	public void setEmployeemaster(final Employeemaster value)
 	{
 		setEmployeemaster( getSession().getSessionContext(), value );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Assignedtask.status</code> attribute.
+	 * @return the status
+	 */
+	public EnumerationValue getStatus(final SessionContext ctx)
+	{
+		return (EnumerationValue)getProperty( ctx, STATUS);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Getter of the <code>Assignedtask.status</code> attribute.
+	 * @return the status
+	 */
+	public EnumerationValue getStatus()
+	{
+		return getStatus( getSession().getSessionContext() );
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Assignedtask.status</code> attribute. 
+	 * @param value the status
+	 */
+	public void setStatus(final SessionContext ctx, final EnumerationValue value)
+	{
+		setProperty(ctx, STATUS,value);
+	}
+	
+	/**
+	 * <i>Generated method</i> - Setter of the <code>Assignedtask.status</code> attribute. 
+	 * @param value the status
+	 */
+	public void setStatus(final EnumerationValue value)
+	{
+		setStatus( getSession().getSessionContext(), value );
 	}
 	
 	/**

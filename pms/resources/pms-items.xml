@@ -2,7 +2,7 @@
             xsi:noNamespaceSchemaLocation="items.xsd">
    
    <enumtypes>
-        <enumtype code="Satus" autocreate="true" generate="true" dynamic="false">
+        <enumtype code="Status" autocreate="true" generate="true" dynamic="false">
             <value code="Pending"/>
             <value code="Completed"/>
         </enumtype>
@@ -46,6 +46,10 @@
                     <description>State</description>
                     <persistence type="property" />
                 </attribute>
+                <attribute type="Status" qualifier="status">
+    				<persistence type="property"/>
+    				<defaultvalue>em().getEnumerationValue("Status","Pending")</defaultvalue>
+				</attribute>
             </attributes>
         </itemtype>
         

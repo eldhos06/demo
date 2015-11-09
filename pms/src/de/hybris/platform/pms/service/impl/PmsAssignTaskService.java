@@ -4,6 +4,8 @@
 package de.hybris.platform.pms.service.impl;
 
 import de.hybris.platform.pms.dao.AssignTaskdao;
+import de.hybris.platform.pms.model.AssignedtaskModel;
+import de.hybris.platform.pms.model.EmployeemasterModel;
 import de.hybris.platform.pms.model.ProjectModel;
 import de.hybris.platform.pms.model.TaskMasterModel;
 import de.hybris.platform.pms.service.AssignTaskService;
@@ -34,5 +36,15 @@ public class PmsAssignTaskService implements AssignTaskService
 		return RESULT;
 	}
 
+	public List<AssignedtaskModel> GetAssignedDetails(final String TaskId)
+	{
+		final List<AssignedtaskModel> RESULT = assignTaskdao.GetAssignedDetails(TaskId);
+		return RESULT;
+	}
 
+	public List<EmployeemasterModel> GetEmployeedetails(final String EmployeeId)
+	{
+		final List<EmployeemasterModel> RESULT = assignTaskdao.GetEmployeedetails(EmployeeId);
+		return RESULT;
+	}
 }

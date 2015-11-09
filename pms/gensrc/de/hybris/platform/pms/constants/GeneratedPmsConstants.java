@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 9 Nov, 2015 3:12:14 PM                      ---
+ * --- Generated at 9 Nov, 2015 6:18:35 PM                      ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -30,9 +30,9 @@ public class GeneratedPmsConstants
 		public static final String ASSIGNEDTASK = "Assignedtask".intern();
 		public static final String EMPLOYEEMASTER = "Employeemaster".intern();
 		public static final String PROJECT = "Project".intern();
-		public static final String SATUS = "Satus".intern();
 		public static final String STADIUM = "Stadium".intern();
 		public static final String STATE = "State".intern();
+		public static final String STATUS = "Status".intern();
 		public static final String TASKMASTER = "TaskMaster".intern();
 	}
 	public static class Attributes
@@ -41,7 +41,7 @@ public class GeneratedPmsConstants
 	}
 	public static class Enumerations
 	{
-		public static class Satus
+		public static class Status
 		{
 			public static final String PENDING = "Pending".intern();
 			public static final String COMPLETED = "Completed".intern();

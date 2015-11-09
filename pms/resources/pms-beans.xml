@@ -30,6 +30,7 @@
         <property name="taskPK" type="String"/>
         <property name="AssignedPK" type="String"/>
         <property name="name" type="String"/>
+        <property name="description" type="String"/>
         <property name="assignedTo" type="String"/>
         <property name="status" type="String"/>
     </bean>
@@ -37,6 +38,20 @@
         <description>Data object representing a Assigned Task</description>
         <property name="projectPK" type="String"/>
         <property name="Name" type="String"/>
-        
+    </bean>
+    <bean class="de.hybris.platform.pms.data.AssignedData">
+        <description>Data object representing a Assigned Task</description>
+        <property name="taskPK" type="String"/>
+        <property name="employeePK" type="String"/>
+        <property name="pk" type="String"/>
+    </bean>
+    
+    <bean class="de.hybris.platform.pms.data.EmployeeMasterData">
+        <description>Data object representing a Assigned Task</description>
+        <property name="code" type="String"/>
+        <property name="name" type="String"/>
+        <property name="address" type="String"/>
+        <property name="imagepath" type="String"/>
+        <property name="state" type="String"/>
     </bean>
 </beans>
