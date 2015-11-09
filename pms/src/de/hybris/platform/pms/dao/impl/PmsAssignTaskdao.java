@@ -102,7 +102,7 @@ public class PmsAssignTaskdao implements AssignTaskdao
 	public List<EmployeemasterModel> GetEmployeedetails(final String EmployeeId)
 	{
 		// Build a query for the flexible search.
-		final String queryString = //
+		String queryString = //
 		"SELECT * FROM {" + EmployeeModel._TYPECODE + " AS p} ";
 		if (Integer.parseInt(EmployeeId) > 0)
 		{
