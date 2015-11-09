@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 6 Nov, 2015 1:47:34 PM                      ---
+ * --- Generated at 9 Nov, 2015 3:12:14 PM                      ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -26,6 +26,7 @@ import de.hybris.platform.jalo.extension.Extension;
 import de.hybris.platform.jalo.type.ComposedType;
 import de.hybris.platform.jalo.type.JaloGenericCreationException;
 import de.hybris.platform.pms.constants.PmsConstants;
+import de.hybris.platform.pms.jalo.Assignedtask;
 import de.hybris.platform.pms.jalo.Employeemaster;
 import de.hybris.platform.pms.jalo.Project;
 import de.hybris.platform.pms.jalo.Stadium;
@@ -56,6 +57,32 @@ public abstract class GeneratedPmsManager extends Extension
 			ret.putAll(attr);
 		}
 		return ret;
+	}
+	
+	public Assignedtask createAssignedtask(final SessionContext ctx, final Map attributeValues)
+	{
+		try
+		{
+			ComposedType type = getTenant().getJaloConnection().getTypeManager().getComposedType( PmsConstants.TC.ASSIGNEDTASK );
+			return (Assignedtask)type.newInstance( ctx, attributeValues );
+		}
+		catch( JaloGenericCreationException e)
+		{
+			final Throwable cause = e.getCause();
+			throw (cause instanceof RuntimeException ?
+			(RuntimeException)cause
+			:
+			new JaloSystemException( cause, cause.getMessage(), e.getErrorCode() ) );
+		}
+		catch( JaloBusinessException e )
+		{
+			throw new JaloSystemException( e ,"error creating Assignedtask : "+e.getMessage(), 0 );
+		}
+	}
+	
+	public Assignedtask createAssignedtask(final Map attributeValues)
+	{
+		return createAssignedtask( getSession().getSessionContext(), attributeValues );
 	}
 	
 	public Employeemaster createEmployeemaster(final SessionContext ctx, final Map attributeValues)

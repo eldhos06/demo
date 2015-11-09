@@ -57,6 +57,16 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 		);
 	
 		createItemType(
+			"Assignedtask",
+			"GenericItem",
+			de.hybris.platform.pms.jalo.Assignedtask.class,
+			"de.hybris.platform.persistence.pms_Assignedtask",
+			false,
+			null,
+			false
+		);
+	
+		createItemType(
 			"State",
 			"GenericItem",
 			de.hybris.platform.pms.jalo.State.class,
@@ -96,6 +106,17 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			false
 		);
 	
+		createRelationType(
+			"EmployeeTaskRelation",
+			null,
+			true
+		);
+	
+		createEnumerationType(
+			"Satus",
+			null
+		);
+	
 	}
 
 	/**
@@ -113,6 +134,12 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			
 				single_createattr_Stadium_capacity();
 			
+				single_createattr_Assignedtask_code();
+			
+				single_createattr_Assignedtask_employeemaster();
+			
+				single_createattr_Assignedtask_taskMaster();
+			
 				single_createattr_State_code();
 			
 				single_createattr_State_name();
@@ -129,10 +156,34 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			
 				single_createattr_Employeemaster_imagepath();
 			
+				single_createattr_Employeemaster_state();
+			
 				single_createattr_TaskMaster_code();
 			
 				single_createattr_TaskMaster_description();
 			
+				single_createattr_TaskMaster_project();
+			
+		createRelationAttributes(
+			"EmployeeTaskRelation", 
+			false, 
+
+			"employeemaster", 
+			"Employeemaster", 
+			true,
+			de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG, 
+			false,
+			false,
+			CollectionType.COLLECTION,
+			"taskMasters", 
+			"TaskMaster", 
+			true,
+			de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG, 
+			true,
+			false,
+			CollectionType.COLLECTION
+		);
+	
 
 	}
 
@@ -171,6 +222,57 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			
 	}
 	
+	public void single_createattr_Assignedtask_code() throws JaloBusinessException
+	{
+		
+						Map sqlColumnDefinitions = null;
+					
+				createPropertyAttribute(
+					"Assignedtask", 
+					"code",  
+					null,
+					"java.lang.String",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
+					null,
+					sqlColumnDefinitions
+				);
+			
+	}
+	
+	public void single_createattr_Assignedtask_employeemaster() throws JaloBusinessException
+	{
+		
+						Map sqlColumnDefinitions = null;
+					
+				createPropertyAttribute(
+					"Assignedtask", 
+					"employeemaster",  
+					null,
+					"Employeemaster",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
+					null,
+					sqlColumnDefinitions
+				);
+			
+	}
+	
+	public void single_createattr_Assignedtask_taskMaster() throws JaloBusinessException
+	{
+		
+						Map sqlColumnDefinitions = null;
+					
+				createPropertyAttribute(
+					"Assignedtask", 
+					"taskMaster",  
+					null,
+					"TaskMaster",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
+					null,
+					sqlColumnDefinitions
+				);
+			
+	}
+	
 	public void single_createattr_State_code() throws JaloBusinessException
 	{
 		
@@ -197,7 +299,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 					"State", 
 					"name",  
 					null,
-					"java.lang.Integer",
+					"java.lang.String",
 					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
 					null,
 					sqlColumnDefinitions
@@ -231,7 +333,7 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 					"Project", 
 					"name",  
 					null,
-					"java.lang.Integer",
+					"java.lang.String",
 					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
 					null,
 					sqlColumnDefinitions
@@ -307,6 +409,23 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			
 	}
 	
+	public void single_createattr_Employeemaster_state() throws JaloBusinessException
+	{
+		
+						Map sqlColumnDefinitions = null;
+					
+				createPropertyAttribute(
+					"Employeemaster", 
+					"state",  
+					null,
+					"State",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
+					null,
+					sqlColumnDefinitions
+				);
+			
+	}
+	
 	public void single_createattr_TaskMaster_code() throws JaloBusinessException
 	{
 		
@@ -333,7 +452,24 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 					"TaskMaster", 
 					"description",  
 					null,
-					"java.lang.Integer",
+					"java.lang.String",
+					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
+					null,
+					sqlColumnDefinitions
+				);
+			
+	}
+	
+	public void single_createattr_TaskMaster_project() throws JaloBusinessException
+	{
+		
+						Map sqlColumnDefinitions = null;
+					
+				createPropertyAttribute(
+					"TaskMaster", 
+					"project",  
+					null,
+					"Project",
 					de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG,
 					null,
 					sqlColumnDefinitions
@@ -352,6 +488,35 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 		// performCreateObjects
 	
 	
+		createEnumerationValues(
+			"Satus",
+			false,
+			Arrays.asList( new String[] {
+			
+				"Pending",
+				"Completed"
+			} )
+		);
+	
+		single_setRelAttributeProperties_EmployeeTaskRelation_source();
+	
+		single_setRelAttributeProperties_EmployeeTaskRelation_target();
+	
+		connectRelation(
+			"EmployeeTaskRelation", 
+			false, 
+			"employeemaster", 
+			"Employeemaster", 
+			true,
+			de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG, 
+			"taskMasters", 
+			"TaskMaster", 
+			true,
+			de.hybris.platform.jalo.type.AttributeDescriptor.READ_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.WRITE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.OPTIONAL_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.REMOVE_FLAG|de.hybris.platform.jalo.type.AttributeDescriptor.SEARCH_FLAG, 
+			true,
+			true
+		);
+	
 				{
 				Map customPropsMap = new HashMap();
 				
@@ -368,6 +533,25 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 			single_setAttributeProperties_Stadium_code();
 		
 			single_setAttributeProperties_Stadium_capacity();
+		
+				{
+				Map customPropsMap = new HashMap();
+				
+				setItemTypeProperties(
+					"Assignedtask",
+					false,
+					true,
+					true,
+					null,
+					customPropsMap
+				);
+				}
+			
+			single_setAttributeProperties_Assignedtask_code();
+		
+			single_setAttributeProperties_Assignedtask_employeemaster();
+		
+			single_setAttributeProperties_Assignedtask_taskMaster();
 		
 				{
 				Map customPropsMap = new HashMap();
@@ -424,6 +608,8 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 		
 			single_setAttributeProperties_Employeemaster_imagepath();
 		
+			single_setAttributeProperties_Employeemaster_state();
+		
 				{
 				Map customPropsMap = new HashMap();
 				
@@ -441,6 +627,15 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 		
 			single_setAttributeProperties_TaskMaster_description();
 		
+			single_setAttributeProperties_TaskMaster_project();
+		
+				setDefaultProperties(
+					"Satus",
+					true,
+					true,
+					null
+				);
+			
 	}
 
 
@@ -477,6 +672,72 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							setAttributeProperties(
 								"Stadium", 
 								"capacity",
+								false, 
+								null,
+								null,
+								null,
+								true,
+								true,
+								null,
+								customPropsMap,
+								null
+							);
+						}
+					
+						public void single_setAttributeProperties_Assignedtask_code() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"Assignedtask", 
+								"code",
+								true, 
+								null,
+								null,
+								null,
+								true,
+								true,
+								null,
+								customPropsMap,
+								null
+							);
+						}
+					
+						public void single_setAttributeProperties_Assignedtask_employeemaster() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"Assignedtask", 
+								"employeemaster",
+								false, 
+								null,
+								null,
+								null,
+								true,
+								true,
+								null,
+								customPropsMap,
+								null
+							);
+						}
+					
+						public void single_setAttributeProperties_Assignedtask_taskMaster() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"Assignedtask", 
+								"taskMaster",
 								false, 
 								null,
 								null,
@@ -665,6 +926,28 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							);
 						}
 					
+						public void single_setAttributeProperties_Employeemaster_state() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"Employeemaster", 
+								"state",
+								false, 
+								null,
+								null,
+								null,
+								true,
+								true,
+								null,
+								customPropsMap,
+								null
+							);
+						}
+					
 						public void single_setAttributeProperties_TaskMaster_code() throws JaloBusinessException
 						{
 							
@@ -709,6 +992,70 @@ public class GeneratedTypeInitializer extends AbstractTypeInitializer
 							);
 						}
 					
+						public void single_setAttributeProperties_TaskMaster_project() throws JaloBusinessException
+						{
+							
+							
+							
+							Map customPropsMap = new HashMap();
+							
+							setAttributeProperties(
+								"TaskMaster", 
+								"project",
+								false, 
+								null,
+								null,
+								null,
+								true,
+								true,
+								null,
+								customPropsMap,
+								null
+							);
+						}
+					
+								public void single_setRelAttributeProperties_EmployeeTaskRelation_source() throws JaloBusinessException
+								{
+									
+									Map customPropsMap = new HashMap();
+									
+
+									setAttributeProperties(
+										"TaskMaster", 
+										"employeemaster",
+										false, 
+										null,
+										null,
+										null,
+										true,
+										true,
+										null,
+										customPropsMap,
+										null
+									);
+								}
+							
+								public void single_setRelAttributeProperties_EmployeeTaskRelation_target() throws JaloBusinessException
+								{
+									
+									Map customPropsMap = new HashMap();
+									
+
+									setAttributeProperties(
+										"Employeemaster", 
+										"taskMasters",
+										false, 
+										null,
+										null,
+										null,
+										true,
+										true,
+										null,
+										customPropsMap,
+										null
+									);
+								}
+							
 }
 
 	

@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 6 Nov, 2015 1:47:34 PM                      ---
+ * --- Generated at 9 Nov, 2015 3:12:14 PM                      ---
  * ----------------------------------------------------------------
  *  
  * [y] hybris Platform
@@ -89,44 +89,25 @@ public abstract class GeneratedState extends GenericItem
 	 * <i>Generated method</i> - Getter of the <code>State.name</code> attribute.
 	 * @return the name - State
 	 */
-	public Integer getName(final SessionContext ctx)
+	public String getName(final SessionContext ctx)
 	{
-		return (Integer)getProperty( ctx, NAME);
+		return (String)getProperty( ctx, NAME);
 	}
 	
 	/**
 	 * <i>Generated method</i> - Getter of the <code>State.name</code> attribute.
 	 * @return the name - State
 	 */
-	public Integer getName()
+	public String getName()
 	{
 		return getName( getSession().getSessionContext() );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Getter of the <code>State.name</code> attribute. 
-	 * @return the name - State
-	 */
-	public int getNameAsPrimitive(final SessionContext ctx)
-	{
-		Integer value = getName( ctx );
-		return value != null ? value.intValue() : 0;
-	}
-	
-	/**
-	 * <i>Generated method</i> - Getter of the <code>State.name</code> attribute. 
-	 * @return the name - State
-	 */
-	public int getNameAsPrimitive()
-	{
-		return getNameAsPrimitive( getSession().getSessionContext() );
 	}
 	
 	/**
 	 * <i>Generated method</i> - Setter of the <code>State.name</code> attribute. 
 	 * @param value the name - State
 	 */
-	public void setName(final SessionContext ctx, final Integer value)
+	public void setName(final SessionContext ctx, final String value)
 	{
 		setProperty(ctx, NAME,value);
 	}
@@ -135,25 +116,7 @@ public abstract class GeneratedState extends GenericItem
 	 * <i>Generated method</i> - Setter of the <code>State.name</code> attribute. 
 	 * @param value the name - State
 	 */
-	public void setName(final Integer value)
-	{
-		setName( getSession().getSessionContext(), value );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Setter of the <code>State.name</code> attribute. 
-	 * @param value the name - State
-	 */
-	public void setName(final SessionContext ctx, final int value)
-	{
-		setName( ctx,Integer.valueOf( value ) );
-	}
-	
-	/**
-	 * <i>Generated method</i> - Setter of the <code>State.name</code> attribute. 
-	 * @param value the name - State
-	 */
-	public void setName(final int value)
+	public void setName(final String value)
 	{
 		setName( getSession().getSessionContext(), value );
 	}

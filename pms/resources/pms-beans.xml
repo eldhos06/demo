@@ -25,5 +25,18 @@
 		<property name="flag" type="boolean"/>
 	</bean>
 	-->
-
+	<bean class="de.hybris.platform.pms.data.AssignedTaskData">
+        <description>Data object representing a Assigned Task</description>
+        <property name="taskPK" type="String"/>
+        <property name="AssignedPK" type="String"/>
+        <property name="name" type="String"/>
+        <property name="assignedTo" type="String"/>
+        <property name="status" type="String"/>
+    </bean>
+    <bean class="de.hybris.platform.pms.data.ProjectData">
+        <description>Data object representing a Assigned Task</description>
+        <property name="projectPK" type="String"/>
+        <property name="Name" type="String"/>
+        
+    </bean>
 </beans>

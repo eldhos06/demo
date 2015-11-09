@@ -10,11 +10,10 @@
    
  <relations>
     <relation code="EmployeeTaskRelation" localized="false" generate="true" autocreate="true">
-       <sourceElement type="Employeemaster" qualifier="taskMaster" cardinality="one" />
+       <sourceElement type="Employeemaster" qualifier="employeemaster" cardinality="one" />
        <targetElement type="TaskMaster" qualifier="taskMasters" cardinality="many"/>
  </relation>
-    
-    
+       
 </relations>
    
     <itemtypes>
@@ -32,6 +31,23 @@
             </attributes>
         </itemtype>
         
+        <itemtype code="Assignedtask" generate="true" autocreate="true">
+            <deployment table="Assignedtaskdetails" typecode="10128" />
+            <attributes>
+            	<attribute qualifier="code" type="java.lang.String" >
+                    <persistence type="property"/>
+                    <modifiers optional="false" unique="true"/>
+                </attribute>
+                 <attribute qualifier="employeemaster" type="Employeemaster">
+                    <description>State</description>
+                    <persistence type="property" />
+                </attribute>
+                <attribute qualifier="taskMaster" type="TaskMaster">
+                    <description>State</description>
+                    <persistence type="property" />
+                </attribute>
+            </attributes>
+        </itemtype>
         
         <itemtype code="State" generate="true" autocreate="true">
             <deployment table="PmsStateMaster" typecode="10126" />
